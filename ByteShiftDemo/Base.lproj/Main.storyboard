@@ -121,6 +121,22 @@
                                     <action selector="selectUser1" destination="LhU-r2-1YO" eventType="touchUpInside" id="zA0-Hd-UIa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNk-Tv-7AO">
+                                <rect key="frame" x="278" y="238" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Details"/>
+                                <connections>
+                                    <segue destination="bVf-GJ-33W" kind="show" identifier="statsSegue" id="kjQ-qU-j42"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAd-Ic-MUm">
+                                <rect key="frame" x="278" y="388" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Details"/>
+                                <connections>
+                                    <segue destination="bVf-GJ-33W" kind="show" identifier="statsSegue" id="weX-e3-YSS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -132,6 +148,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wey-Mg-Sfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2237.5999999999999" y="540.17991004497753"/>
+        </scene>
+        <!--Stats View Controller-->
+        <scene sceneID="Baf-Mg-lG5">
+            <objects>
+                <viewController id="bVf-GJ-33W" customClass="StatsViewController" customModule="ByteShiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ux0-sD-9Do"/>
+                        <viewControllerLayoutGuide type="bottom" id="yDe-jU-Qva"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FHT-kK-EIa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6z-yE-jdf">
+                                <rect key="frame" x="138" y="91" width="98" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="userLabel" destination="M6z-yE-jdf" id="BLs-Tv-df6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ec-e0-Oi2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3253.5999999999999" y="800.14992503748135"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="j1J-Gg-2Y1">
@@ -152,4 +198,7 @@
             <point key="canvasLocation" x="2238" y="-220"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="weX-e3-YSS"/>
+    </inferredMetricsTieBreakers>
 </document>

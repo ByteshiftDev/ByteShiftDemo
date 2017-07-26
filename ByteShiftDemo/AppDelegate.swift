@@ -13,9 +13,19 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var user = [User]()
+    var currentUser = 0
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let user1 = User()
+        let user2 = User()
+        user.append(user1)
+        user.append(user2)
+        
+        
         // Override point for customization after application launch.
         return true
     }
