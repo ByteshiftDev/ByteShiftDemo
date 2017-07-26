@@ -10,9 +10,22 @@ import UIKit
 
 class DurationIncentiveViewController: UIViewController {
 
+    @IBOutlet weak var timerLable: UILabel!
+    var seconds = 0;
+    var timer = Timer();
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(DurationIncentiveViewController.updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    func updateTimer(){
+        seconds += 1;
+        timerLable.text = "\(seconds)";
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        startTimer()
         // Do any additional setup after loading the view.
     }
 
