@@ -9,7 +9,27 @@
 import UIKit
 
 class SelectiveUserViewController: UIViewController {
+    
+    
+    @IBOutlet weak var button1: UIButton!
 
+    @IBOutlet weak var button2: UIButton!
+   
+    
+    @IBAction func selectUser1() {
+        button1.backgroundColor = .red
+        button2.backgroundColor = .white
+        
+    }
+    
+    @IBAction func selectUser2() {
+        button2.backgroundColor = .red
+        button1.backgroundColor = .white
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
