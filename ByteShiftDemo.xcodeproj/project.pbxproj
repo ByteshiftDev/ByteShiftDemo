@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EC1C5F41F2925340042C56B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1C5F31F2925340042C56B /* User.swift */; };
 		A3DFA8511F22764E00CAC57F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DFA8501F22764E00CAC57F /* AppDelegate.swift */; };
 		A3DFA8561F22764E00CAC57F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DFA8541F22764E00CAC57F /* Main.storyboard */; };
 		A3DFA8591F22764E00CAC57F /* ByteShiftDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3DFA8571F22764E00CAC57F /* ByteShiftDemo.xcdatamodeld */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7EC1C5F31F2925340042C56B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A3DFA84D1F22764E00CAC57F /* ByteShiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByteShiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DFA8501F22764E00CAC57F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3DFA8551F22764E00CAC57F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				A3DFA8811F22795300CAC57F /* MapViewController.swift */,
 				A3DFA8871F2279C600CAC57F /* HomeViewController.swift */,
 				A3DFA8851F2279AC00CAC57F /* SelectiveUserViewController.swift */,
+				7EC1C5F31F2925340042C56B /* User.swift */,
 				A3DFA8831F22798F00CAC57F /* DurationIncentiveViewController.swift */,
 				A3DFA8A21F229B1E00CAC57F /* Beacon */,
 				A3DFA8891F2279D000CAC57F /* SupportingFiles */,
@@ -299,6 +302,7 @@
 				A3DFA8591F22764E00CAC57F /* ByteShiftDemo.xcdatamodeld in Sources */,
 				A3DFA8881F2279C600CAC57F /* HomeViewController.swift in Sources */,
 				A3DFA8821F22795300CAC57F /* MapViewController.swift in Sources */,
+				7EC1C5F41F2925340042C56B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
