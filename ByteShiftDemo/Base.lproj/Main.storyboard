@@ -220,6 +220,9 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dwC-R8-Ett" kind="show" id="KUc-gi-2fk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abl-8u-hJq" customClass="RoundButton" customModule="ByteShiftDemo" customModuleProvider="target">
                                 <rect key="frame" x="42" y="234" width="80" height="80"/>
@@ -238,6 +241,9 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dwC-R8-Ett" kind="show" id="4zO-7r-uxx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P8-b1-pLN" customClass="RoundButton" customModule="ByteShiftDemo" customModuleProvider="target">
                                 <rect key="frame" x="42" y="354" width="80" height="80"/>
@@ -256,6 +262,9 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dwC-R8-Ett" kind="show" id="lVH-5K-Pwb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lC-vs-PGb" customClass="RoundButton" customModule="ByteShiftDemo" customModuleProvider="target">
                                 <rect key="frame" x="42" y="469" width="80" height="80"/>
@@ -274,6 +283,27 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dwC-R8-Ett" kind="show" id="EcW-hf-OO0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIo-HK-D8m" customClass="RoundButton" customModule="ByteShiftDemo" customModuleProvider="target">
+                                <rect key="frame" x="196" y="116" width="145" height="433"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.72403214900000001" blue="0.4614064618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Slots Machine"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dwC-R8-Ett" kind="show" id="uQE-k0-24t"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -281,10 +311,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wn-Dz-Ouc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2237.5999999999999" y="-220.83958020989508"/>
+            <point key="canvasLocation" x="2238" y="-741"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TqY-v8-o8B">
+            <objects>
+                <viewController id="dwC-R8-Ett" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6mt-jY-QIp"/>
+                        <viewControllerLayoutGuide type="bottom" id="g8J-lV-4fL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dmf-ax-FQw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfX-SC-yqz">
+                                <rect key="frame" x="125" y="217" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="information details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uT-ed-ckZ">
+                                <rect key="frame" x="116" y="261" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4uT-ed-ckZ" firstAttribute="top" secondItem="DfX-SC-yqz" secondAttribute="bottom" constant="23" id="4ef-Tk-adg"/>
+                            <constraint firstItem="g8J-lV-4fL" firstAttribute="top" secondItem="4uT-ed-ckZ" secondAttribute="bottom" constant="385" id="dyi-dE-1Xd"/>
+                            <constraint firstItem="4uT-ed-ckZ" firstAttribute="centerX" secondItem="dmf-ax-FQw" secondAttribute="centerX" id="wZR-AE-WoM"/>
+                            <constraint firstItem="DfX-SC-yqz" firstAttribute="centerX" secondItem="dmf-ax-FQw" secondAttribute="centerX" id="yqo-TV-lfq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddf-Kg-f5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3118" y="-741"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="weX-e3-YSS"/>
+        <segue reference="KUc-gi-2fk"/>
     </inferredMetricsTieBreakers>
 </document>
