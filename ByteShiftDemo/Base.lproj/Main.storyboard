@@ -202,35 +202,12 @@
                     <view key="view" contentMode="scaleToFill" id="GZW-gz-Vk1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HPJ-KO-1zQ">
-                                <rect key="frame" x="16" y="83" width="343" height="564"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="rZE-e3-mnp" kind="embed" id="Isg-JY-64b"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wn-Dz-Ouc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2237.5999999999999" y="-220.83958020989508"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="8cm-it-Zlr">
-            <objects>
-                <viewController id="rZE-e3-mnp" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="K11-G9-lSX">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="564"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PW2-QQ-ZRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2966" y="-515"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

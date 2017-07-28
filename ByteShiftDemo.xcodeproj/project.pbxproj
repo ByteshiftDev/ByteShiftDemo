@@ -233,6 +233,7 @@
 				TargetAttributes = {
 					A3DFA84C1F22764E00CAC57F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GB6QPQV6VW;
 						ProvisioningStyle = Automatic;
 					};
 					A3DFA8631F22764E00CAC57F = {
@@ -456,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GB6QPQV6VW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ByteShiftDemo",
@@ -473,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GB6QPQV6VW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ByteShiftDemo",

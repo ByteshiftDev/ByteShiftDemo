@@ -8,28 +8,47 @@
 
 import UIKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
+    
+    let locationManager = CLLocationManager()
+    let region = CLBeaconRegion(proximityUUID: UUID(uuidString: "01234567-0123-0123-0123-012345678910")!, identifier: "Estimotes")
+    let backgroundImages = [
+        // key are the minor values
+        11960: #imageLiteral(resourceName: "mapsamplettop"),
+        53700: #imageLiteral(resourceName: "mapsamplemiddle"),
+        25536: #imageLiteral(resourceName: "mapsamplebottom")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
+        //self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "mapsample"))
+        self.view.backgroundColor = .white
+        
+        self.locationManager.delegate = self
+        if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.authorizedWhenInUse){
+            locationManager.requestWhenInUseAuthorization()
+            
+        }
+        locationManager.startRangingBeacons(in: region)
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+        let knownBeacons = beacons.filter{$0.proximity != CLProximity.unknown}
+        if(knownBeacons.count > 0){
+            let closestBeacon = knownBeacons[0] as CLBeacon
+            if(self.backgroundImages[closestBeacon.minor.intValue] != nil){
+                self.view.backgroundColor = UIColor(patternImage: self.backgroundImages[closestBeacon.minor.intValue]!)
+            }
+        }
     }
-    */
+
 
 }
