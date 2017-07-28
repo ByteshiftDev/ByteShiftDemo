@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7EC1C5F41F2925340042C56B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1C5F31F2925340042C56B /* User.swift */; };
 		7EC1C5F61F2931540042C56B /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1C5F51F2931530042C56B /* StatsViewController.swift */; };
+		7EC1C5FB1F2BCADB0042C56B /* BeaconID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1C5F71F2BCADB0042C56B /* BeaconID.swift */; };
+		7EC1C5FC1F2BCADB0042C56B /* BeaconNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1C5F81F2BCADB0042C56B /* BeaconNotificationsManager.swift */; };
+		7EC1C5FD1F2BCADB0042C56B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1C5F91F2BCADB0042C56B /* Notification.swift */; };
+		7EC1C5FE1F2BCADB0042C56B /* UserNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1C5FA1F2BCADB0042C56B /* UserNotificationsManager.swift */; };
 		A3DFA8511F22764E00CAC57F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DFA8501F22764E00CAC57F /* AppDelegate.swift */; };
 		A3DFA8561F22764E00CAC57F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DFA8541F22764E00CAC57F /* Main.storyboard */; };
 		A3DFA8591F22764E00CAC57F /* ByteShiftDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3DFA8571F22764E00CAC57F /* ByteShiftDemo.xcdatamodeld */; };
@@ -43,6 +47,10 @@
 /* Begin PBXFileReference section */
 		7EC1C5F31F2925340042C56B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7EC1C5F51F2931530042C56B /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		7EC1C5F71F2BCADB0042C56B /* BeaconID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconID.swift; sourceTree = "<group>"; };
+		7EC1C5F81F2BCADB0042C56B /* BeaconNotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconNotificationsManager.swift; sourceTree = "<group>"; };
+		7EC1C5F91F2BCADB0042C56B /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		7EC1C5FA1F2BCADB0042C56B /* UserNotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationsManager.swift; sourceTree = "<group>"; };
 		A3DFA84D1F22764E00CAC57F /* ByteShiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByteShiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DFA8501F22764E00CAC57F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3DFA8551F22764E00CAC57F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +167,10 @@
 		A3DFA8A21F229B1E00CAC57F /* Beacon */ = {
 			isa = PBXGroup;
 			children = (
+				7EC1C5F71F2BCADB0042C56B /* BeaconID.swift */,
+				7EC1C5F81F2BCADB0042C56B /* BeaconNotificationsManager.swift */,
+				7EC1C5F91F2BCADB0042C56B /* Notification.swift */,
+				7EC1C5FA1F2BCADB0042C56B /* UserNotificationsManager.swift */,
 				A3DFA8A01F229B1900CAC57F /* EstimoteSDK.framework */,
 				A3DFA8A31F229B9100CAC57F /* ObjCBridge.h */,
 			);
@@ -233,6 +245,7 @@
 				TargetAttributes = {
 					A3DFA84C1F22764E00CAC57F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9PUG3ZA4ME;
 						ProvisioningStyle = Automatic;
 					};
 					A3DFA8631F22764E00CAC57F = {
@@ -304,8 +317,12 @@
 				7EC1C5F61F2931540042C56B /* StatsViewController.swift in Sources */,
 				A3DFA8511F22764E00CAC57F /* AppDelegate.swift in Sources */,
 				A3DFA8591F22764E00CAC57F /* ByteShiftDemo.xcdatamodeld in Sources */,
+				7EC1C5FE1F2BCADB0042C56B /* UserNotificationsManager.swift in Sources */,
 				A3DFA8881F2279C600CAC57F /* HomeViewController.swift in Sources */,
+				7EC1C5FB1F2BCADB0042C56B /* BeaconID.swift in Sources */,
 				A3DFA8821F22795300CAC57F /* MapViewController.swift in Sources */,
+				7EC1C5FD1F2BCADB0042C56B /* Notification.swift in Sources */,
+				7EC1C5FC1F2BCADB0042C56B /* BeaconNotificationsManager.swift in Sources */,
 				7EC1C5F41F2925340042C56B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,13 +473,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9PUG3ZA4ME;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ByteShiftDemo",
 				);
 				INFOPLIST_FILE = ByteShiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ByteShift.ByteShiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = ByteShiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = ByteShiftDemo/ObjCBridge.h;
 				SWIFT_VERSION = 3.0;
@@ -473,13 +491,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9PUG3ZA4ME;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ByteShiftDemo",
 				);
 				INFOPLIST_FILE = ByteShiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ByteShift.ByteShiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = ByteShiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = ByteShiftDemo/ObjCBridge.h;
 				SWIFT_VERSION = 3.0;

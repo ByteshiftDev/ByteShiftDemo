@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate {
 
     var window: UIWindow?
     
@@ -18,12 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var currentUser = 0
 
 
+    let beaconNotificationsManager = BeaconNotificationsManager()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let user1 = User()
         let user2 = User()
         user.append(user1)
         user.append(user2)
+        
         
         
         // Override point for customization after application launch.
