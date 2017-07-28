@@ -20,11 +20,16 @@ class DurationIncentiveViewController: UIViewController {
     
     func updateTimer(){
         seconds += 1;
-        timerLable.text = "\(seconds)";
+        timerLable.text = "\(seconds)" + " Seconds";
+    }
+    
+    func stopTimer(){
+        timer.invalidate()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        timerLable.text = "\(seconds)" + " Seconds";
         startTimer()
         // Do any additional setup after loading the view.
     }
