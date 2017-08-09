@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate {
@@ -16,10 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     
     var user = [User]()
     var currentUser = 0
-
+    var seconds = 0
+    var timer = Timer()
+    
 
     let beaconNotificationsManager = BeaconNotificationsManager()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in })
         
         let user1 = User()
         let user2 = User()
@@ -30,6 +35,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         // Override point for customization after application launch.
         return true
+    }
+    
+    
+    /****************/
+    /******TIMER*****/
+    /****************/
+    
+    func updateTimer(){
+        seconds += 1;
+        
+        if(seconds % 10 == 0)
+        {
+            let content = UNMutableNotificationContent()
+            content.title = "Countdown Timer"
+            content.body = "You have been here for " + String(seconds) + "seconds"
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let request = UNNotificationRequest(identifier: "duration", content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
