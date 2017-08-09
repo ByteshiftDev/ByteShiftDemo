@@ -48,6 +48,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 self.view.backgroundColor = UIColor(patternImage: self.backgroundImages[closestBeacon.minor.intValue]!)
             }
         }
+        else{
+            self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "mapsample"))
+        }
     }
 
 
