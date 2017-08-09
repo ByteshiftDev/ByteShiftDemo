@@ -28,6 +28,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>&quot;We use low-energy Bluetooth devices installed at the casino to find you inside and provide relevant information. Would you like free drinks?&quot;</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>&quot;We use low-energy Bluetooth devices installed at the casino to find you inside and provide relevant information. Would you like free drinks?&quot;</string>
 	<key>UISupportedInterfaceOrientations</key>

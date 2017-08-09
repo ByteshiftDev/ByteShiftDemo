@@ -23,8 +23,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "mapsample"))
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "mapsample"))
+        //self.view.backgroundColor = .white
         
         self.locationManager.delegate = self
         if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.authorizedWhenInUse){
