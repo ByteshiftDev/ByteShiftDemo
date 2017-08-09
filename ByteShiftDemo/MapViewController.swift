@@ -45,7 +45,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         UIGraphicsBeginImageContext(view.frame.size)
-        UIImage(named: "mapsample")?.draw(in: self.view.bounds)
+        #imageLiteral(resourceName: "mapsample").draw(in: self.view.bounds)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
