@@ -141,13 +141,14 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         let beacon3 = BeaconID(UUIDString: "01234567-0123-0123-0123-012345678910", major: 54381, minor: 53700)
         let beacon4 = BeaconID(UUIDString: "01234567-0123-0123-0123-012345678910", major: 61236, minor: 25536)
         
+        
         let notification1 = Notification(Title: "Notification1", Description: "Beacon1", entryMessage: "Beacon1 Triggered", exitMessage: "Exiting Beacon1", BeaconID: "01234567-0123-0123-0123-012345678910" + ":" + String(describing: beacon1.major) + ":" + String(describing: beacon1.minor))
         
         let notification2 = Notification(Title: "Notification2", Description: "Beacon2", entryMessage: "Beacon2 Triggered", exitMessage: "Exiting Beacon2", BeaconID: "01234567-0123-0123-0123-012345678910" + ":" + String(describing: beacon2.major) + ":" + String(describing: beacon2.minor))
         
         let notification3 = Notification(Title: "Notification3", Description: "Beacon3", entryMessage: "Beacon3 Triggered", exitMessage: "Exiting Beacon3", BeaconID: "01234567-0123-0123-0123-012345678910" + ":" + String(describing: beacon3.major) + ":" + String(describing: beacon3.minor))
         
-        let notification4 = Notification(Title: "Notification4", Description: "Beacon4", entryMessage: "Beacon4 Triggered", exitMessage: "Exiting Beacon4", BeaconID: "01234567-0123-0123-0123-012345678910" + ":" + String(describing: beacon4.major) + ":" + String(describing: beacon4.minor))
+        let notification4 = Notification(Title: "Duration Incentive", Description: "Beacon4", entryMessage: "Countdown Started!", exitMessage: "Countdown Stopped!", BeaconID: "01234567-0123-0123-0123-012345678910" + ":" + String(describing: beacon4.major) + ":" + String(describing: beacon4.minor))
         
         
         self.BeaconsList.append(beacon1)
@@ -191,6 +192,8 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         for beacon in BeaconsList{
             if (beacon.asBeaconRegion == region) {
                 
+                durationEnter(region: region)
+                
                 //get the corresponding notification
                 let notification = beaconNotificationDictionary[beacon]
                 
@@ -206,6 +209,7 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         
     }
     
+   
     /* Display beacon exit notification
         Similar to the didEnterRegion function, but triggers 30 seconds after the device is out of beacon range
         Exit messages are optional, so for most beacons, this function is not display a notification
@@ -216,6 +220,8 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         //Find the beacon that exited
         for beacon in BeaconsList{
             if (beacon.asBeaconRegion == region) {
+                
+                durationExit(region: region)
                 
                 //get the corresponding notificatoin
                 let notification = beaconNotificationDictionary[beacon]
@@ -230,6 +236,21 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         }
     }
     
+    func durationEnter(region: CLBeaconRegion)
+    {
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:61236:25536")
+        {
+            GlobalTimer.sharedTimer.startTimer()
+        }
+    }
+    
+    func durationExit(region: CLBeaconRegion)
+    {
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:61236:25536")
+        {
+            GlobalTimer.sharedTimer.stopTimer()
+        }
+    }
     
     // Setup iOS 10 notifications for the given string
     fileprivate func showNotificationWithMessage(_ message: String) {
@@ -272,6 +293,10 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
 //extension that allows notifications to be displayed within out application
 extension BeaconNotificationsManager: UNUserNotificationCenterDelegate
 {
+    var appDelegate:AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         print ("Using correct extention!")
         completionHandler([.alert, .sound])
