@@ -23,8 +23,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "mapsample"))
-        //self.view.backgroundColor = .white
+        //self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "mapsample"))
         
         self.locationManager.delegate = self
         if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.authorizedWhenInUse){
@@ -40,16 +39,37 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        UIGraphicsBeginImageContext(view.frame.size)
+        UIImage(named: "mapsample")?.draw(in: self.view.bounds)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        view.backgroundColor = UIColor.init(patternImage: image!)
+    }
+    
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         let knownBeacons = beacons.filter{$0.proximity != CLProximity.unknown}
         if(knownBeacons.count > 0){
             let closestBeacon = knownBeacons[0] as CLBeacon
             if(self.backgroundImages[closestBeacon.minor.intValue] != nil){
-                self.view.backgroundColor = UIColor(patternImage: self.backgroundImages[closestBeacon.minor.intValue]!)
+                
+                UIGraphicsBeginImageContext(view.frame.size)
+                self.backgroundImages[closestBeacon.minor.intValue]?.draw(in: self.view.bounds)
+                let image = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+                
+                self.view.backgroundColor = UIColor.init(patternImage: image!)
+                
+                
+                
+                //self.view.backgroundColor = UIColor(patternImage: self.backgroundImages[closestBeacon.minor.intValue]!)
             }
         }
         else{
-            self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "mapsample"))
+            //self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "mapsample"))
+            viewDidLayoutSubviews()
         }
     }
 
