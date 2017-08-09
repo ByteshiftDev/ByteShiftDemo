@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 var globalID = 0;
 
@@ -19,6 +20,14 @@ class User {
         status = "new user"
         globalID = globalID + 1
         ID = globalID
+        
+        //setup visitDictionary
+        visitDictionary["Beacon1"] = 0
+        visitDictionary["Beacon2"] = 1
+        visitDictionary["Beacon3"] = 2
+        visitDictionary["Beacon4"] = 3
+
+        
     }
     
     func incrementVisitCount(key: String){

@@ -10,8 +10,22 @@ import UIKit
 
 class StatsViewController: UIViewController {
     
+    @IBOutlet weak var statusLabel: UILabel!
 
     @IBOutlet weak var userLabel: UILabel!
+    
+    
+    @IBOutlet weak var visitLabel1: UILabel!
+    @IBOutlet weak var visitLabel2: UILabel!
+    @IBOutlet weak var visitLabel3: UILabel!
+    @IBOutlet weak var visitLabel4: UILabel!
+    
+    
+    @IBOutlet weak var visitCount1: UILabel!
+    @IBOutlet weak var visitCount2: UILabel!
+    @IBOutlet weak var visitCount3: UILabel!
+    @IBOutlet weak var visitCount4: UILabel!
+    
     
     public func changeUserLabel(newLabel: String){
         userLabel.text = newLabel
@@ -20,10 +34,26 @@ class StatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let currentUser = appDelegate.user[appDelegate.currentUser]
                 
         userLabel.text = "User" + String(describing: appDelegate.currentUser)
+        statusLabel.text = currentUser.status
         
+        var keyArray = Array(currentUser.visitDictionary.keys)
+    
+        visitLabel1.text = keyArray[0]
+        visitLabel2.text = keyArray[1]
+        visitLabel3.text = keyArray[2]
+        visitLabel4.text = keyArray[3]
         
+        visitCount1.text = String(describing: currentUser.visitDictionary[keyArray[0]]!)
+        visitCount2.text = String(describing: currentUser.visitDictionary[keyArray[1]]!)
+        visitCount3.text = String(describing: currentUser.visitDictionary[keyArray[2]]!)
+        visitCount4.text = String(describing: currentUser.visitDictionary[keyArray[3]]!)
+
+        
+    
         // Do any additional setup after loading the view.
     }
 

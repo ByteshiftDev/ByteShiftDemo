@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         
         
+        
         // Override point for customization after application launch.
         return true
     }
