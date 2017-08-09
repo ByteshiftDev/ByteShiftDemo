@@ -240,7 +240,7 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
     {
         if(region.identifier == "01234567-0123-0123-0123-012345678910:61236:25536")
         {
-            appDelegate.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(appDelegate.updateTimer), userInfo: nil, repeats: true)
+            GlobalTimer.sharedTimer.startTimer()
         }
     }
     
@@ -248,7 +248,7 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
     {
         if(region.identifier == "01234567-0123-0123-0123-012345678910:61236:25536")
         {
-            appDelegate.timer.invalidate()
+            GlobalTimer.sharedTimer.stopTimer()
         }
     }
     

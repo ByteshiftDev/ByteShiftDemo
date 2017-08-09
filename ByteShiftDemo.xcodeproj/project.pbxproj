@@ -25,6 +25,7 @@
 		A3DFA8861F2279AC00CAC57F /* SelectiveUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DFA8851F2279AC00CAC57F /* SelectiveUserViewController.swift */; };
 		A3DFA8881F2279C600CAC57F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DFA8871F2279C600CAC57F /* HomeViewController.swift */; };
 		A3DFA8A11F229B1900CAC57F /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DFA8A01F229B1900CAC57F /* EstimoteSDK.framework */; };
+		A3FF72CB1F3BAD47008F39C9 /* GlobalTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FF72CA1F3BAD47008F39C9 /* GlobalTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		A3DFA8871F2279C600CAC57F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A3DFA8A01F229B1900CAC57F /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		A3DFA8A31F229B9100CAC57F /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
+		A3FF72CA1F3BAD47008F39C9 /* GlobalTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				A3DFA8851F2279AC00CAC57F /* SelectiveUserViewController.swift */,
 				7EC1C5F31F2925340042C56B /* User.swift */,
 				A3DFA8831F22798F00CAC57F /* DurationIncentiveViewController.swift */,
+				A3FF72CA1F3BAD47008F39C9 /* GlobalTimer.swift */,
 				A3DFA8A21F229B1E00CAC57F /* Beacon */,
 				A3DFA8891F2279D000CAC57F /* SupportingFiles */,
 			);
@@ -245,7 +248,7 @@
 				TargetAttributes = {
 					A3DFA84C1F22764E00CAC57F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9PUG3ZA4ME;
+						DevelopmentTeam = GB6QPQV6VW;
 						ProvisioningStyle = Automatic;
 					};
 					A3DFA8631F22764E00CAC57F = {
@@ -321,6 +324,7 @@
 				A3DFA8881F2279C600CAC57F /* HomeViewController.swift in Sources */,
 				7EC1C5FB1F2BCADB0042C56B /* BeaconID.swift in Sources */,
 				A3DFA8821F22795300CAC57F /* MapViewController.swift in Sources */,
+				A3FF72CB1F3BAD47008F39C9 /* GlobalTimer.swift in Sources */,
 				7EC1C5FD1F2BCADB0042C56B /* Notification.swift in Sources */,
 				7EC1C5FC1F2BCADB0042C56B /* BeaconNotificationsManager.swift in Sources */,
 				7EC1C5F41F2925340042C56B /* User.swift in Sources */,
@@ -473,14 +477,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9PUG3ZA4ME;
+				DEVELOPMENT_TEAM = GB6QPQV6VW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ByteShiftDemo",
 				);
 				INFOPLIST_FILE = ByteShiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ByteShiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = ByteShiftDemo1.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = ByteShiftDemo/ObjCBridge.h;
 				SWIFT_VERSION = 3.0;
@@ -491,14 +495,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9PUG3ZA4ME;
+				DEVELOPMENT_TEAM = GB6QPQV6VW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ByteShiftDemo",
 				);
 				INFOPLIST_FILE = ByteShiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ByteShiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = ByteShiftDemo1.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = ByteShiftDemo/ObjCBridge.h;
 				SWIFT_VERSION = 3.0;
