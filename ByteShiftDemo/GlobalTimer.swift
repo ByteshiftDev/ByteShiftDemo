@@ -18,7 +18,11 @@ class GlobalTimer:NSObject {
     
     var internalTimer: Timer?
     
-    var seconds = 0
+    public var seconds = 0
+    
+    func getTime() -> Int{
+        return seconds
+    }
     
     func startTimer(){
         if internalTimer == nil {
