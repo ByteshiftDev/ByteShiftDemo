@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NFz-vO-uEk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NFz-vO-uEk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,38 +22,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGt-D3-r9b">
-                                <rect key="frame" x="125" y="318" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Duration Incentive"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGt-D3-r9b">
+                                <rect key="frame" x="90" y="294" width="193" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="s0l-PM-dAK"/>
+                                </constraints>
+                                <state key="normal" title="Duration Incentive">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="YCb-BP-8YQ" kind="show" identifier="Timer" id="scW-pI-RhW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2f-64-Gli">
-                                <rect key="frame" x="145" y="212" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Display Map"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2f-64-Gli">
+                                <rect key="frame" x="90" y="212" width="193" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6ko-YJ-2YM"/>
+                                </constraints>
+                                <state key="normal" title="Display Map">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="G4M-nI-2U9" kind="show" identifier="Map" id="iVv-td-M57"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zL-IA-YOU">
-                                <rect key="frame" x="124" y="416" width="126" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="User Specification"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ByteShift_Icon_Silver" translatesAutoresizingMaskIntoConstraints="NO" id="p9X-b2-UGE">
+                                <rect key="frame" x="67" y="91" width="240" height="83"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zL-IA-YOU">
+                                <rect key="frame" x="90" y="376" width="193" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3vf-uE-suz"/>
+                                </constraints>
+                                <state key="normal" title="User Specification">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="LhU-r2-1YO" kind="show" identifier="Users" id="and-aS-uvT"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.29411764705882354" green="0.20784313725490194" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TGt-D3-r9b" secondAttribute="trailing" constant="76" id="7lL-nS-HVN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C2f-64-Gli" secondAttribute="trailing" constant="76" id="B30-fv-sc9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p9X-b2-UGE" secondAttribute="trailing" constant="52" id="B8Z-Qt-60F"/>
+                            <constraint firstItem="TGt-D3-r9b" firstAttribute="leading" secondItem="SCs-yv-T0P" secondAttribute="leadingMargin" constant="74" id="CR0-mQ-y16"/>
+                            <constraint firstItem="TGt-D3-r9b" firstAttribute="top" secondItem="C2f-64-Gli" secondAttribute="bottom" constant="52" id="Fk7-27-b5F"/>
+                            <constraint firstItem="p9X-b2-UGE" firstAttribute="top" secondItem="d91-TC-WHK" secondAttribute="bottom" constant="27" id="LPJ-Fa-rGX"/>
+                            <constraint firstItem="1zL-IA-YOU" firstAttribute="top" secondItem="TGt-D3-r9b" secondAttribute="bottom" constant="52" id="N3U-oR-esj"/>
+                            <constraint firstItem="1zL-IA-YOU" firstAttribute="leading" secondItem="SCs-yv-T0P" secondAttribute="leadingMargin" constant="74" id="ObA-lx-14v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1zL-IA-YOU" secondAttribute="trailing" constant="76" id="XAv-Xp-DbF"/>
+                            <constraint firstItem="p9X-b2-UGE" firstAttribute="leading" secondItem="SCs-yv-T0P" secondAttribute="leadingMargin" constant="51" id="b0i-qa-Rxb"/>
+                            <constraint firstItem="C2f-64-Gli" firstAttribute="top" secondItem="p9X-b2-UGE" secondAttribute="bottom" constant="38" id="b9o-av-iUs"/>
+                            <constraint firstItem="C2f-64-Gli" firstAttribute="leading" secondItem="SCs-yv-T0P" secondAttribute="leadingMargin" constant="74" id="bwY-6r-iFJ"/>
+                            <constraint firstItem="TGt-D3-r9b" firstAttribute="top" secondItem="C2f-64-Gli" secondAttribute="bottom" constant="52" id="fdZ-YG-7AW"/>
+                            <constraint firstItem="1zL-IA-YOU" firstAttribute="top" secondItem="TGt-D3-r9b" secondAttribute="bottom" constant="52" id="gaU-Ws-JiC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Mut-cJ-itB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L8D-xK-j4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="144"/>
+            <point key="canvasLocation" x="1016.8" y="143.47826086956522"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IiW-Gv-Wst">
@@ -83,14 +118,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzh-v7-Rev">
-                                <rect key="frame" x="91" y="131" width="193" height="49"/>
+                                <rect key="frame" x="91" y="122" width="193" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.29411764705882354" green="0.20784313725490194" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="timerLable" destination="qzh-v7-Rev" id="HpP-Nt-lTV"/>
@@ -386,6 +422,9 @@
             <point key="canvasLocation" x="2966" y="-515"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ByteShift_Icon_Silver" width="214" height="83"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="weX-e3-YSS"/>
     </inferredMetricsTieBreakers>
