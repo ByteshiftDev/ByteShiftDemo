@@ -35,6 +35,8 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
     //Dictionary to connect up Beacons with thier corresponding Notifications
     private var beaconNotificationDictionary = [BeaconID:Notification]()
     
+    //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     
     override init() {
         super.init()
@@ -186,6 +188,8 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         Once entered, this function finds the beacon that entered and displays the corresponsing "entry_message" notification ***/
     func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         print("Entered")
         
         //find the beacon that entered
@@ -195,17 +199,19 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
                 durationEnter(region: region)
                 
                 //get the corresponding notification
-                let notification = beaconNotificationDictionary[beacon]
+                if let notification = beaconNotificationDictionary[beacon] {
                 
-                //if this notification has an entry Message (which it should)
-                if let message = notification?.entryMessage{
+                    appDelegate.user[appDelegate.currentUser].visitDictionary[notification.Description]? += 1
+                
+                    //if this notification has an entry Message (which it should)
+                    let message = notification.entryMessage
                     
                     //show message
                     self.showNotificationWithMessage(message)
+                    
                 }
             }
         }
-        
         
     }
     
@@ -274,6 +280,7 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
                 print("Uh oh! We had an error: \(error)")
             }
         }
+        
     }
     
     // Location Service Pemission Denied
@@ -290,19 +297,7 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
     
 }
 
-//extension that allows notifications to be displayed within out application
-extension BeaconNotificationsManager: UNUserNotificationCenterDelegate
-{
-    var appDelegate:AppDelegate {
-        return UIApplication.shared.delegate as! AppDelegate
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print ("Using correct extention!")
-        completionHandler([.alert, .sound])
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        completionHandler()
-    }
-}
+
+
+
+

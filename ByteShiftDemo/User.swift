@@ -15,6 +15,7 @@ class User {
     var ID: Int
     var status: String
     var visitDictionary = [String:Int]()
+    var visitDurations = [String:Int]()
     
     init(){
         status = "new user"
@@ -23,9 +24,14 @@ class User {
         
         //setup visitDictionary
         visitDictionary["Beacon1"] = 0
-        visitDictionary["Beacon2"] = 1
-        visitDictionary["Beacon3"] = 2
-        visitDictionary["Beacon4"] = 3
+        visitDictionary["Beacon2"] = 0
+        visitDictionary["Beacon3"] = 0
+        visitDictionary["Beacon4"] = 0
+        
+        visitDurations["Beacon1"] = 0
+        visitDurations["Beacon2"] = 0
+        visitDurations["Beacon3"] = 0
+        visitDurations["Beacon4"] = 0
 
         
     }

@@ -15,16 +15,29 @@ class StatsViewController: UIViewController {
     @IBOutlet weak var userLabel: UILabel!
     
     
+    /**************** Visit Count ****************/
     @IBOutlet weak var visitLabel1: UILabel!
     @IBOutlet weak var visitLabel2: UILabel!
     @IBOutlet weak var visitLabel3: UILabel!
     @IBOutlet weak var visitLabel4: UILabel!
     
-    
     @IBOutlet weak var visitCount1: UILabel!
     @IBOutlet weak var visitCount2: UILabel!
     @IBOutlet weak var visitCount3: UILabel!
     @IBOutlet weak var visitCount4: UILabel!
+    
+    
+    /**************** Visit Duration ****************/
+    @IBOutlet weak var durationLabel1: UILabel!
+    @IBOutlet weak var durationLabel2: UILabel!
+    @IBOutlet weak var durationLabel3: UILabel!
+    @IBOutlet weak var durationLabel4: UILabel!
+    
+    @IBOutlet weak var durationTime1: UILabel!
+    @IBOutlet weak var durationTime2: UILabel!
+    @IBOutlet weak var durationTime3: UILabel!
+    @IBOutlet weak var durationTime4: UILabel!
+    
     
     
     public func changeUserLabel(newLabel: String){
@@ -41,6 +54,7 @@ class StatsViewController: UIViewController {
         statusLabel.text = currentUser.status
         
         var keyArray = Array(currentUser.visitDictionary.keys)
+        var keyVisitTimeArray = Array(currentUser.visitDurations.keys)
     
         visitLabel1.text = keyArray[0]
         visitLabel2.text = keyArray[1]
@@ -51,6 +65,19 @@ class StatsViewController: UIViewController {
         visitCount2.text = String(describing: currentUser.visitDictionary[keyArray[1]]!)
         visitCount3.text = String(describing: currentUser.visitDictionary[keyArray[2]]!)
         visitCount4.text = String(describing: currentUser.visitDictionary[keyArray[3]]!)
+        
+        
+        durationLabel1.text = keyVisitTimeArray[0]
+        durationLabel2.text = keyVisitTimeArray[1]
+        durationLabel3.text = keyVisitTimeArray[2]
+        durationLabel4.text = keyVisitTimeArray[3]
+        
+        durationTime1.text = String(describing: currentUser.visitDurations[keyVisitTimeArray[0]]!)
+        durationTime2.text = String(describing: currentUser.visitDurations[keyVisitTimeArray[1]]!)
+        durationTime3.text = String(describing: currentUser.visitDurations[keyVisitTimeArray[2]]!)
+        durationTime4.text = String(describing: currentUser.visitDurations[keyVisitTimeArray[3]]!)
+        
+        
 
         
     
