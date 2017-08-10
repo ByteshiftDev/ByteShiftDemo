@@ -15,9 +15,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     let region = CLBeaconRegion(proximityUUID: UUID(uuidString: "01234567-0123-0123-0123-012345678910")!, identifier: "Estimotes")
     let backgroundImages = [
         // key are the minor values
-        11960: #imageLiteral(resourceName: "mapsamplettop"),
-        53700: #imageLiteral(resourceName: "mapsamplemiddle"),
-        25536: #imageLiteral(resourceName: "mapsamplebottom")
+        11960: #imageLiteral(resourceName: "top"),
+        53700: #imageLiteral(resourceName: "middle"),
+        25536: #imageLiteral(resourceName: "bottom")
     ]
     
     override func viewDidLoad() {
@@ -45,7 +45,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         UIGraphicsBeginImageContext(view.frame.size)
-        #imageLiteral(resourceName: "mapsample").draw(in: self.view.bounds)
+        #imageLiteral(resourceName: "map").draw(in: self.view.bounds)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
