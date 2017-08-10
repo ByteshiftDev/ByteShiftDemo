@@ -227,10 +227,11 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         for beacon in BeaconsList{
             if (beacon.asBeaconRegion == region) {
                 
-                durationExit(region: region)
                 
                 //get the corresponding notificatoin
                 let notification = beaconNotificationDictionary[beacon]
+                
+                durationExit(region: region, description: (notification?.Description)!)
                 
                 //if this notification has an exit message
                 if let message = notification?.exitMessage{
@@ -250,11 +251,11 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         }
     }
     
-    func durationExit(region: CLBeaconRegion)
+    func durationExit(region: CLBeaconRegion, description: String)
     {
         if(region.identifier == "01234567-0123-0123-0123-012345678910:61236:25536")
         {
-            GlobalTimer.sharedTimer.stopTimer()
+            GlobalTimer.sharedTimer.stopTimer(description: description)
         }
     }
     

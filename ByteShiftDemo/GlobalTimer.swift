@@ -8,8 +8,11 @@
 
 import Foundation
 import UserNotifications
+import UIKit
 
 class GlobalTimer:NSObject {
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     static let sharedTimer: GlobalTimer = {
         let timer = GlobalTimer()
@@ -33,13 +36,18 @@ class GlobalTimer:NSObject {
     }
     
     
-    func stopTimer(){
+    func stopTimer(description: String){
 //        guard self.internalTimer != nil
 //            else {
 //                fatalError("Stop Timer Error")
 //        }
         
         self.internalTimer?.invalidate()
+        
+        let currentUser = appDelegate.user[appDelegate.currentUser]
+        currentUser.visitDurations[description]? += (seconds - 30)
+        
+        seconds = 0
     }
 
     func updateTimer(){
