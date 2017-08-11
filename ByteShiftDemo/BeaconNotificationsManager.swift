@@ -260,7 +260,7 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
             GlobalTimer.sharedTimer2.startTimer()
         }
         
-        if(region.identifier == "01234567-0123-0123-0123-012345678910:21236:25536")
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:61236:25536")
         {
             GlobalTimer.sharedTimer3.startTimer()
         }
@@ -269,7 +269,7 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
     
     func durationExit(region: CLBeaconRegion, description: String)
     {
-        if(region.identifier == "01234567-0123-0123-0123-012345678910:61236:25536")
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:42296:25327")
         {
             GlobalTimer.sharedTimer.stopTimer(description: description)
         }
@@ -283,7 +283,7 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
             GlobalTimer.sharedTimer2.stopTimer(description: description)
         }
         
-        if(region.identifier == "01234567-0123-0123-0123-012345678910:21236:25536")
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:61236:25536")
         {
             GlobalTimer.sharedTimer3.stopTimer(description: description)
         }
