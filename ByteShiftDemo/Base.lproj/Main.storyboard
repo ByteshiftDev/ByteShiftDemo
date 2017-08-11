@@ -108,7 +108,7 @@
         <!--Duration Incentive View Controller-->
         <scene sceneID="g3z-oN-hOu">
             <objects>
-                <viewController id="YCb-BP-8YQ" customClass="DurationIncentiveViewController" customModule="ByteShiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="durationIncentive" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YCb-BP-8YQ" customClass="DurationIncentiveViewController" customModule="ByteShiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IJi-1Q-9vI"/>
                         <viewControllerLayoutGuide type="bottom" id="Nia-uQ-AMD"/>
@@ -125,10 +125,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EsW-WM-hd2">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.29411764705882354" green="0.20784313725490194" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="rewardCell" destination="EsW-WM-hd2" id="uE5-b0-zkr"/>
                         <outlet property="timerLable" destination="qzh-v7-Rev" id="HpP-Nt-lTV"/>
                     </connections>
                 </viewController>

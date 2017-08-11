@@ -72,6 +72,7 @@ class GlobalTimer:NSObject {
         /*
         if(seconds % 10 == 0)
         {
+            /*
             let content = UNMutableNotificationContent()
             content.title = "Countdown Timer"
             content.body = "You have been here for " + String(seconds) + "seconds"
@@ -79,6 +80,15 @@ class GlobalTimer:NSObject {
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
             let request = UNNotificationRequest(identifier: "duration", content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+ 
+            
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let test = storyboard.instantiateViewController(withIdentifier: "durationIncentive") as! DurationIncentiveViewController
+            
+            test.rewardPopUp()
+            */
         }
         */
     }
