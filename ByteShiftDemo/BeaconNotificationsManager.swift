@@ -245,7 +245,7 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
     
     func durationEnter(region: CLBeaconRegion)
     {
-        if(region.identifier == "01234567-0123-0123-0123-012345678910:61236:25536")
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:42296:25327")
         {
             GlobalTimer.sharedTimer.startTimer()
         }
