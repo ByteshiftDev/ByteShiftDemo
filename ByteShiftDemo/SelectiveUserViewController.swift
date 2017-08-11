@@ -22,15 +22,20 @@ class SelectiveUserViewController: UIViewController {
     
     @IBAction func selectUser1() {
         appDelegate.currentUser = 0
-        button1.backgroundColor = .red
-        button2.backgroundColor = .white
+        //button1.backgroundColor = .red
+        //button2.backgroundColor = .white
         
+        button1.setImage(#imageLiteral(resourceName: "icons8-Jake Filled-50"), for: .normal)
+        button2.setImage(#imageLiteral(resourceName: "icons8-Jake-50"), for: .normal)
     }
     
     @IBAction func selectUser2() {
         appDelegate.currentUser = 1
-        button2.backgroundColor = .red
-        button1.backgroundColor = .white
+        //button2.backgroundColor = .red
+        //button1.backgroundColor = .white
+        
+        button2.setImage(#imageLiteral(resourceName: "icons8-Jake Filled-50"), for: .normal)
+        button1.setImage(#imageLiteral(resourceName: "icons8-Jake-50"), for: .normal)
     }
     
     
