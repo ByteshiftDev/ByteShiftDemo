@@ -249,6 +249,22 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         {
             GlobalTimer.sharedTimer.startTimer()
         }
+        
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:22179:32626")
+        {
+            GlobalTimer.sharedTimer1.startTimer()
+        }
+        
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:54381:53700")
+        {
+            GlobalTimer.sharedTimer2.startTimer()
+        }
+        
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:21236:25536")
+        {
+            GlobalTimer.sharedTimer3.startTimer()
+        }
+        
     }
     
     func durationExit(region: CLBeaconRegion, description: String)
@@ -256,6 +272,20 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         if(region.identifier == "01234567-0123-0123-0123-012345678910:61236:25536")
         {
             GlobalTimer.sharedTimer.stopTimer(description: description)
+        }
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:22179:32626")
+        {
+            GlobalTimer.sharedTimer1.stopTimer(description: description)
+        }
+        
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:54381:53700")
+        {
+            GlobalTimer.sharedTimer2.stopTimer(description: description)
+        }
+        
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:21236:25536")
+        {
+            GlobalTimer.sharedTimer3.stopTimer(description: description)
         }
     }
     

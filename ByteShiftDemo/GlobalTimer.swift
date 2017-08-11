@@ -19,6 +19,21 @@ class GlobalTimer:NSObject {
         return timer
     }()
     
+    static let sharedTimer1: GlobalTimer = {
+        let timer = GlobalTimer()
+        return timer
+    }()
+    
+    static let sharedTimer2: GlobalTimer = {
+        let timer = GlobalTimer()
+        return timer
+    }()
+    
+    static let sharedTimer3: GlobalTimer = {
+        let timer = GlobalTimer()
+        return timer
+    }()
+    
     var internalTimer: Timer?
     
     public var seconds = 0
