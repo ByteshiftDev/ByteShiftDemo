@@ -16,22 +16,25 @@ class StatsViewController: UIViewController {
     
     
     /**************** Visit Count ****************/
+  
     @IBOutlet weak var visitLabel1: UILabel!
+    
     @IBOutlet weak var visitLabel2: UILabel!
+    
     @IBOutlet weak var visitLabel3: UILabel!
     @IBOutlet weak var visitLabel4: UILabel!
+    
     
     @IBOutlet weak var visitCount1: UILabel!
     @IBOutlet weak var visitCount2: UILabel!
     @IBOutlet weak var visitCount3: UILabel!
     @IBOutlet weak var visitCount4: UILabel!
-    
-    
     /**************** Visit Duration ****************/
     @IBOutlet weak var durationLabel1: UILabel!
     @IBOutlet weak var durationLabel2: UILabel!
     @IBOutlet weak var durationLabel3: UILabel!
     @IBOutlet weak var durationLabel4: UILabel!
+   
     
     @IBOutlet weak var durationTime1: UILabel!
     @IBOutlet weak var durationTime2: UILabel!
