@@ -60,15 +60,16 @@ class GlobalTimer:NSObject {
         self.internalTimer?.invalidate()
         
         let currentUser = appDelegate.user[appDelegate.currentUser]
-        currentUser.visitDurations[description]? += (seconds - 30)
+        currentUser.visitDurations[description]? += seconds
         
         seconds = 0
     }
 
     func updateTimer(){
         seconds += 1;
-        print(seconds)
+        // print(seconds)
         
+        /*
         if(seconds % 10 == 0)
         {
             let content = UNMutableNotificationContent()
@@ -79,6 +80,7 @@ class GlobalTimer:NSObject {
             let request = UNNotificationRequest(identifier: "duration", content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         }
+        */
     }
     
 }
