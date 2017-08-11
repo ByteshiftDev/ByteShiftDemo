@@ -227,10 +227,11 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         for beacon in BeaconsList{
             if (beacon.asBeaconRegion == region) {
                 
-                durationExit(region: region)
                 
                 //get the corresponding notificatoin
                 let notification = beaconNotificationDictionary[beacon]
+                
+                durationExit(region: region, description: (notification?.Description)!)
                 
                 //if this notification has an exit message
                 if let message = notification?.exitMessage{
@@ -248,13 +249,43 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
         {
             GlobalTimer.sharedTimer.startTimer()
         }
+        
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:22179:32626")
+        {
+            GlobalTimer.sharedTimer1.startTimer()
+        }
+        
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:54381:53700")
+        {
+            GlobalTimer.sharedTimer2.startTimer()
+        }
+        
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:21236:25536")
+        {
+            GlobalTimer.sharedTimer3.startTimer()
+        }
+        
     }
     
-    func durationExit(region: CLBeaconRegion)
+    func durationExit(region: CLBeaconRegion, description: String)
     {
         if(region.identifier == "01234567-0123-0123-0123-012345678910:61236:25536")
         {
-            GlobalTimer.sharedTimer.stopTimer()
+            GlobalTimer.sharedTimer.stopTimer(description: description)
+        }
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:22179:32626")
+        {
+            GlobalTimer.sharedTimer1.stopTimer(description: description)
+        }
+        
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:54381:53700")
+        {
+            GlobalTimer.sharedTimer2.stopTimer(description: description)
+        }
+        
+        if(region.identifier == "01234567-0123-0123-0123-012345678910:21236:25536")
+        {
+            GlobalTimer.sharedTimer3.stopTimer(description: description)
         }
     }
     

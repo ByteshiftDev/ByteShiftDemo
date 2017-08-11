@@ -12,7 +12,24 @@ import UIKit
 
 class GlobalTimer:NSObject {
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     static let sharedTimer: GlobalTimer = {
+        let timer = GlobalTimer()
+        return timer
+    }()
+    
+    static let sharedTimer1: GlobalTimer = {
+        let timer = GlobalTimer()
+        return timer
+    }()
+    
+    static let sharedTimer2: GlobalTimer = {
+        let timer = GlobalTimer()
+        return timer
+    }()
+    
+    static let sharedTimer3: GlobalTimer = {
         let timer = GlobalTimer()
         return timer
     }()
@@ -34,7 +51,7 @@ class GlobalTimer:NSObject {
     }
     
     
-    func stopTimer(){
+    func stopTimer(description: String){
 //        guard self.internalTimer != nil
 //            else {
 //                fatalError("Stop Timer Error")
