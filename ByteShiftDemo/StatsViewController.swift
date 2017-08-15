@@ -59,25 +59,25 @@ class StatsViewController: UIViewController {
         var keyArray = Array(currentUser.visitDictionary.keys)
         var keyVisitTimeArray = Array(currentUser.visitDurations.keys)
     
-        visitLabel1.text = keyArray[0]
-        visitLabel2.text = keyArray[1]
-        visitLabel3.text = keyArray[2]
+        visitLabel2.text = keyArray[0]
+        visitLabel3.text = keyArray[1]
+        visitLabel1.text = keyArray[2]
         visitLabel4.text = keyArray[3]
         
-        visitCount1.text = String(describing: currentUser.visitDictionary[keyArray[0]]!)
-        visitCount2.text = String(describing: currentUser.visitDictionary[keyArray[1]]!)
-        visitCount3.text = String(describing: currentUser.visitDictionary[keyArray[2]]!)
+        visitCount2.text = String(describing: currentUser.visitDictionary[keyArray[0]]!)
+        visitCount3.text = String(describing: currentUser.visitDictionary[keyArray[1]]!)
+        visitCount1.text = String(describing: currentUser.visitDictionary[keyArray[2]]!)
         visitCount4.text = String(describing: currentUser.visitDictionary[keyArray[3]]!)
         
         
-        durationLabel1.text = keyVisitTimeArray[0]
-        durationLabel2.text = keyVisitTimeArray[1]
-        durationLabel3.text = keyVisitTimeArray[2]
+        durationLabel2.text = keyVisitTimeArray[0]
+        durationLabel3.text = keyVisitTimeArray[1]
+        durationLabel1.text = keyVisitTimeArray[2]
         durationLabel4.text = keyVisitTimeArray[3]
         
-        durationTime1.text = String(describing: currentUser.visitDurations[keyVisitTimeArray[0]]!)
-        durationTime2.text = String(describing: currentUser.visitDurations[keyVisitTimeArray[1]]!)
-        durationTime3.text = String(describing: currentUser.visitDurations[keyVisitTimeArray[2]]!)
+        durationTime2.text = String(describing: currentUser.visitDurations[keyVisitTimeArray[0]]!)
+        durationTime3.text = String(describing: currentUser.visitDurations[keyVisitTimeArray[1]]!)
+        durationTime1.text = String(describing: currentUser.visitDurations[keyVisitTimeArray[2]]!)
         durationTime4.text = String(describing: currentUser.visitDurations[keyVisitTimeArray[3]]!)
         
         
