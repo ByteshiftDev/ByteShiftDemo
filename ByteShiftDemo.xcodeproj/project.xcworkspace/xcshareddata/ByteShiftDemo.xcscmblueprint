@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "46DB3D0B896C569A890E180AF312A640AA856C11",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "177D11670839CBD11207A4FF2DB4A94F8551C1B5" : 9223372036854775807,
+    "46DB3D0B896C569A890E180AF312A640AA856C11" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C9B264D2-DB0E-4CDC-B613-65E0A0D2E9C2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "177D11670839CBD11207A4FF2DB4A94F8551C1B5" : "..",
+    "46DB3D0B896C569A890E180AF312A640AA856C11" : "ByteShiftDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ByteShiftDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ByteShiftDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/gitlab.com\/InboundRX-Capstone\/Paulsens-iOS-App.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "177D11670839CBD11207A4FF2DB4A94F8551C1B5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/munchur\/ByteShiftDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "46DB3D0B896C569A890E180AF312A640AA856C11"
+    }
+  ]
+}
