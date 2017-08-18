@@ -12,7 +12,7 @@ import UIKit
 let sessionURL = "https://byteshift-api.herokuapp.com/"
 
 
-class WebCallController: URLSession {
+class WebCallController: URLSession  {
     
     // Make a call to a web address to retrieve some data
     // Returns an array of dictionaries via a completion handler
