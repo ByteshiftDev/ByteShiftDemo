@@ -64,9 +64,8 @@
                                     <segue destination="LhU-r2-1YO" kind="show" identifier="Users" id="and-aS-uvT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81B-Us-SQe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81B-Us-SQe">
                                 <rect key="frame" x="90" y="456" width="193" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="User Sign in">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,6 +77,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.29411764705882354" green="0.20784313725490194" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="81B-Us-SQe" secondAttribute="trailing" constant="76" id="2nT-hZ-6x4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TGt-D3-r9b" secondAttribute="trailing" constant="76" id="7lL-nS-HVN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C2f-64-Gli" secondAttribute="trailing" constant="76" id="B30-fv-sc9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p9X-b2-UGE" secondAttribute="trailing" constant="52" id="B8Z-Qt-60F"/>
@@ -86,12 +86,14 @@
                             <constraint firstItem="p9X-b2-UGE" firstAttribute="top" secondItem="d91-TC-WHK" secondAttribute="bottom" constant="27" id="LPJ-Fa-rGX"/>
                             <constraint firstItem="1zL-IA-YOU" firstAttribute="top" secondItem="TGt-D3-r9b" secondAttribute="bottom" constant="52" id="N3U-oR-esj"/>
                             <constraint firstItem="1zL-IA-YOU" firstAttribute="leading" secondItem="SCs-yv-T0P" secondAttribute="leadingMargin" constant="74" id="ObA-lx-14v"/>
+                            <constraint firstItem="81B-Us-SQe" firstAttribute="leading" secondItem="SCs-yv-T0P" secondAttribute="leadingMargin" constant="74" id="WUn-GI-PWZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1zL-IA-YOU" secondAttribute="trailing" constant="76" id="XAv-Xp-DbF"/>
                             <constraint firstItem="p9X-b2-UGE" firstAttribute="leading" secondItem="SCs-yv-T0P" secondAttribute="leadingMargin" constant="51" id="b0i-qa-Rxb"/>
                             <constraint firstItem="C2f-64-Gli" firstAttribute="top" secondItem="p9X-b2-UGE" secondAttribute="bottom" constant="38" id="b9o-av-iUs"/>
                             <constraint firstItem="C2f-64-Gli" firstAttribute="leading" secondItem="SCs-yv-T0P" secondAttribute="leadingMargin" constant="74" id="bwY-6r-iFJ"/>
                             <constraint firstItem="TGt-D3-r9b" firstAttribute="top" secondItem="C2f-64-Gli" secondAttribute="bottom" constant="52" id="fdZ-YG-7AW"/>
                             <constraint firstItem="1zL-IA-YOU" firstAttribute="top" secondItem="TGt-D3-r9b" secondAttribute="bottom" constant="52" id="gaU-Ws-JiC"/>
+                            <constraint firstItem="81B-Us-SQe" firstAttribute="top" secondItem="1zL-IA-YOU" secondAttribute="bottom" constant="50" id="vxi-OI-DUK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Mut-cJ-itB"/>
