@@ -9,9 +9,37 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        /*  Get request example
+        let wc = WebCallController()
+        let geturl = sessionURL + "users/21"
+        
+        wc.getRequest(urlToCall: geturl) { (serverResponse) in
+            print(serverResponse)
+        }
+        */
+        
+        
+        
+        /* Post request example
+         
+        var data = [String:Any]()
+        
+        data["first_name"] = "Jon"
+        data["last_name"] = "Snow"
+        data["email"] = "WhiteWalkersRscary@buildtheWall.com"
+        
+        let posturl = sessionURL + "users"
+        
+        wc.postRequest(urlToCall: posturl, data: data) { (serverResponse) in
+            print(serverResponse)
+        }
+        */
+        
+        
 
         // Do any additional setup after loading the view.
     }
