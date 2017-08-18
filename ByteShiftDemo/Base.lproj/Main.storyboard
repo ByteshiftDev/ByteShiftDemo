@@ -72,7 +72,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TvY-6x-M2n" kind="presentation" id="wBG-xU-azB"/>
+                                    <segue destination="TvY-6x-M2n" kind="push" id="yv1-YO-Hzs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -263,19 +263,23 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JdQ-qi-s60" kind="push" id="7df-tc-Pb9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29411764705882354" green="0.20784313725490194" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RU4-hp-bwV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rE-hA-7Q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1016.8" y="854.1229385307347"/>
         </scene>
-        <!--View Controller-->
+        <!--User Login View Controller-->
         <scene sceneID="ZA8-MU-wmL">
             <objects>
-                <viewController id="JdQ-qi-s60" sceneMemberID="viewController">
+                <viewController id="JdQ-qi-s60" customClass="UserLoginViewController" customModule="ByteShiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qBl-jB-dsF"/>
                         <viewControllerLayoutGuide type="bottom" id="pOv-T1-vn0"/>
@@ -316,9 +320,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svu-H9-fwu">
+                                <rect key="frame" x="150" y="477" width="75" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submit:" destination="JdQ-qi-s60" eventType="touchUpInside" id="JXP-HZ-2Es"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29411764705882354" green="0.20784313725490194" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="S71-xx-yvc"/>
+                    <connections>
+                        <outlet property="email" destination="Qmr-2h-dbp" id="OGt-SM-gs6"/>
+                        <outlet property="firstName" destination="g8d-na-12h" id="FSh-S3-vin"/>
+                        <outlet property="lastName" destination="t2T-3R-VXG" id="vv3-sz-FI4"/>
+                        <outlet property="password" destination="iXE-5D-bEy" id="tFj-o7-5yB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLL-Tv-C8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

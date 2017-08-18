@@ -122,4 +122,23 @@ class WebCallController: URLSession  {
         // Wait on the semaphore within the callback function
         semaphore.wait()
     }
+    
+    func createUser(firstName: String, lastName:String, email:String, password:String) {
+        var data = [String:Any]()
+        
+        data["first_name"] = firstName
+        data["last_name"] = lastName
+        data["email"] = email
+        data["password"] = password
+        
+        let posturl = sessionURL + "users"
+        
+        postRequest(urlToCall: posturl, data: data) { (serverResponse) in
+            print(serverResponse)
+        }
+
+    }
+    
+    
+    
 }

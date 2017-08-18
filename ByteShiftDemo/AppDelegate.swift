@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
     var user = [User]()
     var currentUser = 0
     
+    var globalUser = User()
+    
 
     let beaconNotificationsManager = BeaconNotificationsManager()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

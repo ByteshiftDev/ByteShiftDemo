@@ -27,6 +27,7 @@
 		A3DFA8881F2279C600CAC57F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DFA8871F2279C600CAC57F /* HomeViewController.swift */; };
 		A3DFA8A11F229B1900CAC57F /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DFA8A01F229B1900CAC57F /* EstimoteSDK.framework */; };
 		A3FF72CB1F3BAD47008F39C9 /* GlobalTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FF72CA1F3BAD47008F39C9 /* GlobalTimer.swift */; };
+		DA502B5C1F478FAF00638820 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA502B5B1F478FAF00638820 /* UserLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		A3DFA8A01F229B1900CAC57F /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		A3DFA8A31F229B9100CAC57F /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		A3FF72CA1F3BAD47008F39C9 /* GlobalTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTimer.swift; sourceTree = "<group>"; };
+		DA502B5B1F478FAF00638820 /* UserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				A3DFA8541F22764E00CAC57F /* Main.storyboard */,
+				DA502B5B1F478FAF00638820 /* UserLoginViewController.swift */,
 				7EC1C5F51F2931530042C56B /* StatsViewController.swift */,
 				7E799D4B1F4770A300C7EC5E /* WebCallController.swift */,
 				A3DFA8811F22795300CAC57F /* MapViewController.swift */,
@@ -324,6 +327,7 @@
 				A3DFA8511F22764E00CAC57F /* AppDelegate.swift in Sources */,
 				A3DFA8591F22764E00CAC57F /* ByteShiftDemo.xcdatamodeld in Sources */,
 				7EC1C5FE1F2BCADB0042C56B /* UserNotificationsManager.swift in Sources */,
+				DA502B5C1F478FAF00638820 /* UserLoginViewController.swift in Sources */,
 				7E799D4C1F4770A300C7EC5E /* WebCallController.swift in Sources */,
 				A3DFA8881F2279C600CAC57F /* HomeViewController.swift in Sources */,
 				7EC1C5FB1F2BCADB0042C56B /* BeaconID.swift in Sources */,
