@@ -146,11 +146,11 @@ class WebCallController: URLSession  {
     getRequest(urlToCall: getURL) { (serverResponse) in
       print(serverResponse)
       
-      self.appDelegate.globalUser.firstName = serverResponse["first_name"] as! String
-      self.appDelegate.globalUser.lastName = serverResponse["last_name"] as! String
-      self.appDelegate.globalUser.ID = serverResponse["id"] as! Int
-      self.appDelegate.globalUser.email = serverResponse["email"] as! String
-      self.appDelegate.globalUser.status = serverResponse["status"] as! String
+//      self.appDelegate.globalUser.firstName = serverResponse["first_name"] as! String
+//      self.appDelegate.globalUser.lastName = serverResponse["last_name"] as! String
+//      self.appDelegate.globalUser.ID = serverResponse["id"] as! Int
+//      self.appDelegate.globalUser.email = serverResponse["email"] as! String
+//      self.appDelegate.globalUser.status = serverResponse["status"] as! String
     }
   }
   
