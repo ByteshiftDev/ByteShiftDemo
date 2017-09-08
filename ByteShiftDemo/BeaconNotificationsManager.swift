@@ -233,6 +233,13 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
                 
                 durationExit(region: region, description: (notification?.Description)!)
                 
+                //pushes user data up to the ruby server
+                /**
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let currentUser = appDelegate.user[appDelegate.currentUser]
+                currentUser.pushUserData()
+                */
+                
                 //if this notification has an exit message
                 if let message = notification?.exitMessage{
                     

@@ -42,4 +42,19 @@ class User {
     
     func updateStatus(){
     }
+    
+    
+    //pushes user data to the server
+    func pushUserData() {
+        let wc = WebCallController()
+        
+        var data = [String:Any]()
+        
+        data["visitCountArray"] = visitDictionary
+        data["visitDurationArray"] = visitDurations
+        
+        wc.postRequest(urlToCall: sessionURL + "TODO" , data: data) { (response) in
+            print(response)
+        }
+    }
 }
