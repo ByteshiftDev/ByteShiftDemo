@@ -138,7 +138,45 @@ class WebCallController: URLSession  {
         }
 
     }
+  
+  
+  func loginUser(email: String, password: String) {
+    let getURL = sessionURL + "user/check?email=\(email)&password=\(password)"
     
-    
-    
+    getRequest(urlToCall: getURL) { (serverResponse) in
+      print(serverResponse)
+      
+      self.appDelegate.globalUser.firstName = serverResponse["first_name"] as! String
+      self.appDelegate.globalUser.lastName = serverResponse["last_name"] as! String
+      self.appDelegate.globalUser.ID = serverResponse["id"] as! Int
+      self.appDelegate.globalUser.email = serverResponse["email"] as! String
+      self.appDelegate.globalUser.status = serverResponse["status"] as! String
+    }
+  }
+  
+  func updateUser() {
+//    //var data = [String:Any]()
+//    
+//    /*
+//    data["email"] = email
+//    data["password"] = password
+//    data["visit"] = visit
+//    data["duration"] = duration
+//    */
+//    let posturl = sessionURL + "users"
+//    
+//    postRequest(urlToCall: posturl, data: data) { (serverResponse) in
+//      print(serverResponse)
+//    }
+  }
+
 }
+
+
+extension WebCallController{
+  var appDelegate:AppDelegate {
+    return UIApplication.shared.delegate as! AppDelegate
+  }
+}
+
+

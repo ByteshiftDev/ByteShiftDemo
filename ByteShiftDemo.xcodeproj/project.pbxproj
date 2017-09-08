@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0E78B51F62FD4F00C227EB /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E78B41F62FD4F00C227EB /* CreateUserViewController.swift */; };
 		7E799D4C1F4770A300C7EC5E /* WebCallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E799D4B1F4770A300C7EC5E /* WebCallController.swift */; };
 		7EC1C5F41F2925340042C56B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1C5F31F2925340042C56B /* User.swift */; };
 		7EC1C5F61F2931540042C56B /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1C5F51F2931530042C56B /* StatsViewController.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D0E78B41F62FD4F00C227EB /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		7E799D4B1F4770A300C7EC5E /* WebCallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebCallController.swift; sourceTree = "<group>"; };
 		7EC1C5F31F2925340042C56B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7EC1C5F51F2931530042C56B /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				A3DFA8541F22764E00CAC57F /* Main.storyboard */,
+				3D0E78B41F62FD4F00C227EB /* CreateUserViewController.swift */,
 				DA502B5B1F478FAF00638820 /* UserLoginViewController.swift */,
 				7EC1C5F51F2931530042C56B /* StatsViewController.swift */,
 				7E799D4B1F4770A300C7EC5E /* WebCallController.swift */,
@@ -332,6 +335,7 @@
 				A3DFA8881F2279C600CAC57F /* HomeViewController.swift in Sources */,
 				7EC1C5FB1F2BCADB0042C56B /* BeaconID.swift in Sources */,
 				A3DFA8821F22795300CAC57F /* MapViewController.swift in Sources */,
+				3D0E78B51F62FD4F00C227EB /* CreateUserViewController.swift in Sources */,
 				A3FF72CB1F3BAD47008F39C9 /* GlobalTimer.swift in Sources */,
 				7EC1C5FD1F2BCADB0042C56B /* Notification.swift in Sources */,
 				7EC1C5FC1F2BCADB0042C56B /* BeaconNotificationsManager.swift in Sources */,

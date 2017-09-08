@@ -1,22 +1,25 @@
 //
-//  UserLoginViewController.swift
+//  CreateUserViewController.swift
 //  ByteShiftDemo
 //
-//  Created by Paul on 8/18/17.
+//  Created by Jason Custodio on 9/8/17.
 //  Copyright © 2017 ByteShift. All rights reserved.
 //
 
 import UIKit
 
-class UserLoginViewController: UIViewController {
-  
+class CreateUserViewController: UIViewController {
+
+  @IBOutlet weak var firstName: UITextField!
+  @IBOutlet weak var lastName: UITextField!
   @IBOutlet weak var email: UITextField!
   @IBOutlet weak var password: UITextField!
-    
-  @IBAction func login(_ sender: Any) {
+  
+  
+  @IBAction func submit(_ sender: Any) {
     let wc = WebCallController()
     
-    wc.loginUser(email: email.text!, password: password.text!)
+    wc.createUser(firstName: firstName.text!, lastName: lastName.text!, email: email.text!, password: password.text!)
   }
   
     override func viewDidLoad() {

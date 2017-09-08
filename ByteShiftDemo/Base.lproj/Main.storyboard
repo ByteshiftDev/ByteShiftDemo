@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NFz-vO-uEk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NFz-vO-uEk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -219,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="2237.5999999999999" y="540.17991004497753"/>
         </scene>
-        <!--View Controller-->
+        <!--User Login View Controller-->
         <scene sceneID="gUc-Us-5ts">
             <objects>
-                <viewController id="TvY-6x-M2n" sceneMemberID="viewController">
+                <viewController id="TvY-6x-M2n" customClass="UserLoginViewController" customModule="ByteShiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BuA-ho-Fmn"/>
                         <viewControllerLayoutGuide type="bottom" id="5sE-Oq-144"/>
@@ -255,6 +255,9 @@
                                 <state key="normal" title="Sign in">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="TvY-6x-M2n" eventType="touchUpInside" id="QLw-PO-vSj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJb-cL-0ma">
                                 <rect key="frame" x="124" y="585" width="126" height="30"/>
@@ -271,15 +274,19 @@
                         <color key="backgroundColor" red="0.29411764705882354" green="0.20784313725490194" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="RU4-hp-bwV"/>
+                    <connections>
+                        <outlet property="email" destination="vaQ-m4-1Bo" id="VBn-JT-aci"/>
+                        <outlet property="password" destination="bs0-YD-WRt" id="nyR-8i-Ehk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rE-hA-7Q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1016.8" y="854.1229385307347"/>
         </scene>
-        <!--User Login View Controller-->
+        <!--Create User View Controller-->
         <scene sceneID="ZA8-MU-wmL">
             <objects>
-                <viewController id="JdQ-qi-s60" customClass="UserLoginViewController" customModule="ByteShiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JdQ-qi-s60" customClass="CreateUserViewController" customModule="ByteShiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qBl-jB-dsF"/>
                         <viewControllerLayoutGuide type="bottom" id="pOv-T1-vn0"/>
@@ -328,7 +335,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="submit:" destination="JdQ-qi-s60" eventType="touchUpInside" id="JXP-HZ-2Es"/>
+                                    <action selector="submit:" destination="JdQ-qi-s60" eventType="touchUpInside" id="ZWx-BK-XtP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -336,10 +343,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="S71-xx-yvc"/>
                     <connections>
-                        <outlet property="email" destination="Qmr-2h-dbp" id="OGt-SM-gs6"/>
-                        <outlet property="firstName" destination="g8d-na-12h" id="FSh-S3-vin"/>
-                        <outlet property="lastName" destination="t2T-3R-VXG" id="vv3-sz-FI4"/>
-                        <outlet property="password" destination="iXE-5D-bEy" id="tFj-o7-5yB"/>
+                        <outlet property="email" destination="Qmr-2h-dbp" id="OGA-yW-nJi"/>
+                        <outlet property="firstName" destination="g8d-na-12h" id="2eA-Ke-toW"/>
+                        <outlet property="lastName" destination="t2T-3R-VXG" id="Qs3-ch-Uac"/>
+                        <outlet property="password" destination="iXE-5D-bEy" id="vNg-Ey-7Bm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLL-Tv-C8u" userLabel="First Responder" sceneMemberID="firstResponder"/>

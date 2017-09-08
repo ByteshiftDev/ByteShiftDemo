@@ -12,12 +12,18 @@ import UIKit
 var globalID = 0;
 
 class User {
+  var firstName: String
+  var lastName: String
     var ID: Int
+  var email: String
     var status: String
     var visitDictionary = [String:Int]()
     var visitDurations = [String:Int]()
     
     init(){
+        firstName = "First Name"
+        lastName = "Last Name"
+        email = "Email"
         status = "new user"
         globalID = globalID + 1
         ID = globalID
